@@ -75,3 +75,15 @@ nextBtn.addEventListener('click',function(){
   showPerson(currentItem); // calling the function
 
 })
+
+
+//show prev person
+prevBtn.addEventListener('click',function(){
+  currentItem--; // subtract 1 to value 
+
+  if(currentItem < 0){
+    currentItem = reviews.length - 1 //once clicking reached the first item on the array, it will redirect to the last item on the array
+  }  
+  showPerson(currentItem); // calling the function
+
+})
