@@ -64,3 +64,14 @@ function showPerson(person){
   job.textContent = item.job;
   info.textContent = item.text;
 }
+
+//show next person
+
+nextBtn.addEventListener('click',function(){
+  currentItem++; // add 1 to value 
+  if(currentItem > reviews.length - 1){
+    currentItem = 0; // once value reached the last value on array it will restart
+  }  
+  showPerson(currentItem); // calling the function
+
+})
