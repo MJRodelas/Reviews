@@ -87,3 +87,18 @@ prevBtn.addEventListener('click',function(){
   showPerson(currentItem); // calling the function
 
 })
+
+//show random person
+
+randomBtn.addEventListener('click',function(){
+  currentItem = getRandomNumber()
+  console.log(currentItem)
+  showPerson(currentItem);
+})
+
+function getRandomNumber(){
+  return Math.floor(Math.random() * reviews.length)
+//Math.floor function removes the decimals
+//Math.random function generates random number 0 to less than 1 (inclusive of 0, but not 1) 
+//Multiplied by the length of reviews array to have numbers between 0-3
+}
